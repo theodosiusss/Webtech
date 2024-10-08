@@ -1,0 +1,23 @@
+.divVideos{
+    display: flex;
+    flex-direction: row;
+
+}
+
+#mainContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+iframe{
+    width: 15%;
+    height: 15%;
+}
+
+h1{
+    font-family: Algerian;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
