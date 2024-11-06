@@ -1,10 +1,17 @@
 .divVideos {
     display: flex;
-    flex-direction: row;
+    @media (max-width: 4000px) {
+        flex-direction: row;
+
+    }
+    @media (max-width: 1208px) {
+
+        flex-direction: column;
+    }
 
     padding-top: 2%;
 
-    background-color: blanchedalmond;
+    max-width: 70%;
 }
 
 #mainContainer{

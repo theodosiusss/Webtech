@@ -12,9 +12,9 @@
 </head>
 <body>
 <header>
-    <h1>Tolle Videos</h1>
+    <h1>Tolle Videos hahhaha</h1>
 </header>
-<main id="mainContainer">
+<main>
     <?php include "./Video.php";
     $a = new YoutubeVideo("https://www.youtube.com/embed/vkIsEl-gdTA?si=o4PJD7NubqjZVMF3","life is a name");
     $b = new YoutubeVideo("https://www.youtube.com/embed/vkIsEl-gdTA?si=o4PJD7NubqjZVMF3","life is a name");
