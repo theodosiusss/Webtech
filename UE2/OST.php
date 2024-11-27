@@ -24,10 +24,13 @@ class OST implements JsonSerializable{
         $this->trackList = $trackList;
     }
 
+    public function __toString()
+    {
+        return "$this->ID . $this->name . $this->videoGame . $this->releaseYear";
+    }
 
 
-
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array(
             "ID" => $this->ID,
@@ -62,7 +65,7 @@ class Song implements JsonSerializable{
         $this->duration = $duration;
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array (
             "Id" => $this->id,
@@ -74,16 +77,17 @@ class Song implements JsonSerializable{
     }
 }
 class Seeder{
-    function run()
+    function run() : array
     {
         $a = new OST(1,"Vol 1","Final Fantasy X", 2002,array(new Song(1,"Zanarkand","Nobuo Uematsu",1,184000),new Song(2,"A Fleeting Dream","Nobuo Uematsu",2,262000),new Song(3,"Besaid","Nobuo Uematsu",3,282000),new Song(4,"Ending Theme","Nobuo Uematsu",4,328000)));
         $b = new OST(2,"WHAAAT","BABADA", 2024,array(new Song(1,"My World","Owiwi",1,180000),new Song(2,"Hero Of Mine","Owiwi",2,192000),new Song(3,"Life is a Game","Owiwi",3,200000),new Song(4,"4 Words","Owiwi",4,136000)));
         $c = new OST(3,"high","brain", 2020,array(new Song(1,"Ich werde Okay","Highbrain",1,1948010),new Song(2,"Riptide","Vance Joy",2,192000),new Song(3,"Schuaster Song","Enrico Tamponi",3,427000),new Song(4,"Sauerkautpolka","Gus Backus",4,126000)));
-    }
-}
-$seeder = new Seeder();
-$a = $seeder -> run();
+        return array($a,$b,$c);
 
-echo $a;
+    }
+
+
+}
+
 
 
