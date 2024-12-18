@@ -14,7 +14,7 @@ fetch("https://data.wien.gv.at/daten/geo?service=WFS&request=GetFeature&version=
     });
 
 
-let map = L.map(mapElement).setView([48.2082, 16.3738], 13); // Initialisierung auf Wien
+let map = L.map(mapElement).setView([48.2082, 16.3738], 8); // Initialisierung auf Wien
 
 L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -49,7 +49,7 @@ weddingButton.onclick = function () {
     let target = L.latLng(jsonArray[randomNumber].geometry.coordinates[1], jsonArray[randomNumber].geometry.coordinates[0]);
 
 
-    map.setView(target, 14);
+    map.setView(target, 15);
 
     markersGroup.clearLayers();
 
