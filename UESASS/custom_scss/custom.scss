@@ -1,0 +1,25 @@
+
+$a : green;
+
+$pixels :100px * 10;
+
+$primary: teal;
+$secondary: $a;
+
+
+$success: yellow;
+$link : $a;
+
+p {
+  color: red;
+}
+
+section {
+
+  p{
+    color: #0d6efd;
+    margin-left: $pixels;
+  }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

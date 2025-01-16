@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule FinalFantasy index.php?id=1
+RewriteRule Owiwi index.php?id=2
+RewriteRule Hibr8n index.php?id=3
