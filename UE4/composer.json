@@ -1,0 +1,17 @@
+{
+    "name": "theodorius/ue04",
+    "autoload": {
+        "psr-4": {
+            "Theodorius\\Ue04\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Theodosiusss",
+            "email": "1202@htl.rennweg.at"
+        }
+    ],
+    "require": {
+        "endroid/qr-code": "^6.0"
+    }
+}

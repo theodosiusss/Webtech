@@ -10,7 +10,19 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/UE04/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/UE04/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/UE04/vendor/composer" />
+      <path value="$PROJECT_DIR$/UE04/vendor/endroid/qr-code" />
+      <path value="$PROJECT_DIR$/UE4/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/UE4/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/UE4/vendor/composer" />
+      <path value="$PROJECT_DIR$/UE4/vendor/endroid/qr-code" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStanOptionsConfiguration">
