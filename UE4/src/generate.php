@@ -9,15 +9,15 @@ use Endroid\QrCode\Exception\ValidationException;
 use Endroid\QrCode\RoundBlockSizeMode;
 use Endroid\QrCode\Writer\PngWriter;
 
-$regexTel = '/^\+?[0-9 ]$/';
+$regexTel = '/^(?!([^ ]* ){5,})\+?[0-9 ]+$/';
 
 
 $comic = "Comic Sans MS";
 $num =$_POST["phoneNumber"];
 
-if (isset($num)) {
+if (isset($_POST["phoneNumber"])) {
 
-    if($num.ob_get_length() == 3 )
+    if(strlen($num) == 3 || (strlen($num) > 10 && strlen($num) < 20) ){
 
     if (preg_match($regexTel, $_POST["phoneNumber"])) {
         try {
@@ -29,6 +29,11 @@ if (isset($num)) {
                 <h1 style="color:red; font-family: Comic Sans MS,ui-serif ;">FALSCHERINPUT</h1>';
     }
 
+    }
+    else{
+        echo '<img src="../img.png" alt="Mein Bild" width="300px" height="180px" style="object-fit: cover;">
+                <h1 style="color:red; font-family: Comic Sans MS,ui-serif ;">FALSCHERINPUT</h1>';
+    }
 
 
 }
