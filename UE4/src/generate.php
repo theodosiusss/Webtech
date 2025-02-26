@@ -9,13 +9,15 @@ use Endroid\QrCode\Exception\ValidationException;
 use Endroid\QrCode\RoundBlockSizeMode;
 use Endroid\QrCode\Writer\PngWriter;
 
-$regexTel = '/^\+?[0-9 ]{10,20}$/';
+$regexTel = '/^\+?[0-9 ]$/';
 
 
 $comic = "Comic Sans MS";
+$num =$_POST["phoneNumber"];
 
+if (isset($num)) {
 
-if (isset($_POST["phoneNumber"])) {
+    if($num.ob_get_length() == 3 )
 
     if (preg_match($regexTel, $_POST["phoneNumber"])) {
         try {
