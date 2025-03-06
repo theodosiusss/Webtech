@@ -1,0 +1,15 @@
+{
+    "name": "theodorius/ue5",
+    "autoload": {
+        "psr-4": {
+            "Theodorius\\Ue5\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Theodosiusss",
+            "email": "1202@htl.rennweg.at"
+        }
+    ],
+    "require": {}
+}
