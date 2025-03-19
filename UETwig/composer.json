@@ -1,0 +1,16 @@
+{
+    "name": "theodorius/ue-twig",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Theodorius\\UeTwig\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Theodosiusss",
+            "email": "1202@htl.rennweg.at"
+        }
+    ],
+    "require": {}
+}

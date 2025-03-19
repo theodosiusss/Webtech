@@ -17,7 +17,7 @@ $hotels = [
         "description" => "Known for its elegant design, high-end restaurants, world-class spa, and a top-tier casino experience.",
         "image" => "wynn.png"
     ],
-   
+
 
 
 
