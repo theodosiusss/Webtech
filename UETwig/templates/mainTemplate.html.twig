@@ -1,0 +1,10 @@
+{% extends 'baseTemplate.html.twig' %}
+{% block content %}
+
+    {% for hotel in hotels %}
+
+        {% include "hotelTemplate.html.twig" with {"hotel" : hotel } %}
+
+    {% endfor %}
+
+{% endblock %}

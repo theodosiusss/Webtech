@@ -12,5 +12,7 @@
             "email": "1202@htl.rennweg.at"
         }
     ],
-    "require": {}
+    "require": {
+        "twig/twig": "^3.20"
+    }
 }
