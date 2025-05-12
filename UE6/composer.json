@@ -1,0 +1,19 @@
+{
+    "name": "theodorius/ue6",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Theodorius\\Ue6\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Theodosiusss",
+            "email": "1202@htl.rennweg.at"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.21",
+        "doctrine/dbal": "*"
+    }
+}

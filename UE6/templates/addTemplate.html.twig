@@ -1,0 +1,24 @@
+{% extends 'baseTemplate.html.twig' %}
+    {% block content %}
+
+
+
+        <form method="post" action="../public/addHandler.php">
+        <div>
+            <h2>Names</h2>
+            <label>Player1  Name <input name="player1Name" id="player1Name" required type="text" placeholder="Maxi"></label>
+           <label>Player2 Name <input name="player2Name" id="player2Name" required type="text" placeholder="Musti"></label>
+        </div>
+        <div>
+            <h2>Rock Paper or Scissors</h2>
+            <label>Player1 Pick <input name="player1Pick" id="player1Pick" required type="text" placeholder="Rock"></label>
+            <label>Player2 Pick <input name="player2Pick" id="player2Pick" required type="text" placeholder="Paper"></label>
+        </div>
+        <div>
+            <h2>Date</h2>
+            <label>Player1 Pick <input name="date" id="date"  required type="datetime-local" ></label>
+        </div>
+            <button type="submit">Submit</button>
+        </form>
+
+    {% endblock %}

@@ -1,0 +1,25 @@
+<div class="game">
+
+    <form method="post" action="../public/deleteHandler.php" onsubmit="return confirm('U sure?')">
+    <input type="hidden" name="id" value="{{ game.id }}">
+    <h1>{{ game.name }}</h1>
+    <h2>Date</h2>
+    {{ game.date() }}
+    <h2>Players</h2>
+    <h3>{{ game.player1.name }}</h3>
+    Pick:
+    {{ game.player1.symbol }}
+    <h3>{{ game.player2.name }}</h3>
+    Pick:
+    {{ game.player2.symbol }}
+    <h2>Winner: {{ game.winner }}</h2>
+
+    <button type="submit"> delete</button>
+    </form>
+</div>
+
+<script>
+
+
+
+</script>

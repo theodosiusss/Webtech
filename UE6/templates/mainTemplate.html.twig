@@ -1,0 +1,18 @@
+{% extends 'baseTemplate.html.twig' %}
+    {% block content %}
+        <h1>SUPERMEGADUPATURNIER</h1>
+
+        <div class="wrapper">
+
+
+            {% for game in games %}
+
+                {% include "gameTemplate.html.twig" with {"game" : game } %}
+
+            {% endfor %}
+
+
+        </div>
+
+    {% endblock %}
+

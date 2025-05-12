@@ -1,0 +1,16 @@
+{
+    "name": "theodorius/ue-fluid",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Theodorius\\UeFluid\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Theodosiusss",
+            "email": "1202@htl.rennweg.at"
+        }
+    ],
+    "require": {}
+}
