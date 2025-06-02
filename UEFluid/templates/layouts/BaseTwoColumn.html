@@ -9,10 +9,15 @@
 </head>
 <body>
 
-{% block content %}{% endblock %}
+<f:render partial="Header"/>
+
+<div class="layout-two-column">
+    <f:render section="content"/>
+</div>
+
+
+<f:render partial="Footer"/>
+
 
 </body>
 </html>
-<style>
-
-</style>

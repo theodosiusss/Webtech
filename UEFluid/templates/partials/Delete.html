@@ -1,0 +1,21 @@
+<div class="game">
+    <form method="post" action="../public/index.php" onsubmit="return confirm('U sure?')">
+        <input type="hidden" name="id" value="{game.id}"/>
+        <f:render partial="Game" arguments="{game: game}"/>
+
+
+        <f:if condition="{game.id} > 2">
+            <f:then>
+                <h1>Hello</h1>
+            </f:then>
+            <f:else>
+                <h1>World</h1>
+            </f:else>
+        </f:if>
+        {f:if(condition: '{game.id} == 1' , then: 'supi', else: 'nicht supi')}
+
+
+
+        <button type="submit">delete</button>
+    </form>
+</div>

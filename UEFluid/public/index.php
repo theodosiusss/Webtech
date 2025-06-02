@@ -3,11 +3,11 @@
 
     require_once "../vendor/autoload.php";
 
-    use Theodorius\Ue6\Model\Repository\GameRepository;
-    use Twig\Environment;
-    use Twig\Loader\FilesystemLoader;
+
     use Theodorius\Ue6\Model\Entity\Game;
     use Theodorius\Ue6\Model\Entity\Player;
+    use Theodorius\UeFluid\Model\Repository\GameRepository;
+    use TYPO3Fluid\Fluid\View\TemplateView;
 
     $gameRepository = new GameRepository('pdo-sqlite:///../db/mydb.sqlite');
 
@@ -41,6 +41,9 @@
 
     }
 
+
+
+
     //Post Functionalities end
 
 
@@ -49,28 +52,34 @@
 
 
 
-    $loader = new FilesystemLoader('../templates');
-    $twig = new Environment($loader);
+    $view = new TemplateView();
+    $view->getRenderingContext()->getTemplatePaths()->setTemplateRootPaths(['../templates/templates/']);
+    $view->getRenderingContext()->getTemplatePaths()->setLayoutRootPaths(['../templates/layouts/']);
+    $view->getRenderingContext()->getTemplatePaths()->setPartialRootPaths(['../templates/partials/']);
+
+
     if (in_array($page, $allowed_pages)){
 
         if($page === "home") {
             try {
-                echo $twig->render('mainTemplate.html.twig', ['games' => $gameRepository->findAll()]);
-            } catch (\Twig\Error\LoaderError|\Twig\Error\RuntimeError|\Twig\Error\SyntaxError $e) {
+                $view->assign("games",$gameRepository->findAll());
+               echo $view->render('Main',);
+            } catch (exception $e) {
                 echo $e;
             }
         }
         if($page === "add") {
             try {
-                echo $twig->render('addTemplate.html.twig');
-            } catch (\Twig\Error\LoaderError|\Twig\Error\RuntimeError|\Twig\Error\SyntaxError $e) {
+               echo $view->render('Add',);
+            } catch (exception $e) {
                 echo $e;
             }
         }
         if($page === "delete") {
             try {
-                echo $twig->render('deleteWrapperTemplate.html.twig',['games' => $gameRepository->findAll()]);
-            } catch (\Twig\Error\LoaderError|\Twig\Error\RuntimeError|\Twig\Error\SyntaxError $e) {
+                $view->assign("games",$gameRepository->findAll());
+                echo $view->render('DeleteWrapper',);
+            } catch (exception $e) {
                 echo $e;
             }
         }

@@ -12,5 +12,8 @@
             "email": "1202@htl.rennweg.at"
         }
     ],
-    "require": {}
+    "require": {
+        "typo3fluid/fluid": "^4.2",
+        "doctrine/dbal": "^4.2"
+    }
 }

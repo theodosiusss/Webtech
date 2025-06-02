@@ -1,0 +1,9 @@
+<f:layout name="BaseTwoColumn" />
+
+<f:section name="content">
+    <f:for each="{games}" as="game">
+      <f:render partial="Delete" arguments="{game: game}" />
+
+    </f:for>
+
+</f:section>

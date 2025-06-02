@@ -1,9 +1,11 @@
 {% extends 'baseTemplate.html.twig' %}
     {% block content %}
+        <nav> <a href='home'>Back</a> </nav>
 
 
 
-        <form method="post" action="../public/addHandler.php">
+
+        <form method="post" action="../public/index.php">
         <div>
             <h2>Names</h2>
             <label>Player1  Name <input name="player1Name" id="player1Name" required type="text" placeholder="Maxi"></label>

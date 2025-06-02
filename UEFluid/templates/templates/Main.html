@@ -1,0 +1,11 @@
+<f:layout name="BaseOneColumn" />
+
+<f:section name="content">
+
+
+  <div class="wrapper">
+    <f:for each="{games}" as="game">
+      <f:render partial="Game" arguments="{game: game}" />
+    </f:for>
+  </div>
+</f:section>
